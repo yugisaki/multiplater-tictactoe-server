@@ -86,6 +86,7 @@ fn player_handler(mut stram: TcpStream) {
             // the message that goes to player
 
             let s = String::from_utf8(buffer).unwrap();
+            println!("mesasge from user{}", s);
             let chr: Vec<char> = s.chars().collect();
 
             let player_symbol = chr[0];
